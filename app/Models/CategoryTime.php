@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class CategoryTime extends Model
 {
     public function Detail(){
-        return $this->hasMany(Detail::class);
+        return $this->hasMany(Detail::class,"readtime");
     }
     use HasFactory;
 }
