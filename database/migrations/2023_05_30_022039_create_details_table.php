@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('book_id')->references('id')->on('books');
             $table->string('author');
             $table->date('postdate');
-            $table->integer('readtime');
+            $table->foreignId('readtime')->references('id')->on('category_times');
             $table->longText('body');
             $table->string('sosmedurl');
             $table->string('videourl');
